@@ -1,8 +1,14 @@
 let n = 1;
-let m = 5;
+let m = 3;
+let isSkipEven = true;
+
 let result = 0;
 
-for (let i = n+1; i < m; i++) {
+for (let i = n; i <= m; i++) {
+    if (isSkipEven && i % 2 === 0) {
+        continue;
+    }
+
     result = result + i;
 }
 
