@@ -1,6 +1,6 @@
-let n = 1;
-let m = 3;
-let isSkipEven = true;
+let n = parseInt(prompt("enter N"));
+let m = parseInt(prompt("enter M"));
+let isSkipEven = confirm("чи потрібно пропускати парні числа?");
 
 let result = 0;
 
