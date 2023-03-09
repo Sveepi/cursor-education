@@ -1,16 +1,18 @@
-let n = parseInt(prompt("enter N"));
-let m = parseInt(prompt("enter M"));
-let isSkipEven = confirm("чи потрібно пропускати парні числа?");
+let n = parseInt(prompt('Enter N'));
+let m = parseInt(prompt('Enter M'));
 
-let result = 0;
+if (!isNaN(n) && !isNaN(m)) {
+    let isSkipEven = confirm('Do you want to skip even?');
 
-for (let i = n; i <= m; i++) {
-    if (isSkipEven && i % 2 === 0) {
-        continue;
+    let result = 0;
+
+    for (let i = n; i <= m; i++) {
+        if (isSkipEven && i % 2 === 0) {
+            continue;
+        }
+
+        result = result + i;
     }
 
-    result = result + i;
+    console.log("sum: ", result);
 }
-
-console.log("sum: ", result);
-
