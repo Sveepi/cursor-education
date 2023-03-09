@@ -1,18 +1,27 @@
-let n = parseInt(prompt('Enter N'));
-let m = parseInt(prompt('Enter M'));
+let n;
+do {
+    n = parseInt(prompt('Enter N'));
+}
+while (isNaN(n))
 
-if (!isNaN(n) && !isNaN(m)) {
-    let isSkipEven = confirm('Do you want to skip even?');
+let m;
+do {
+    m = parseInt(prompt('Enter M'));
+}
+while (isNaN(m) || n >= m)
 
-    let result = 0;
+let isSkipEven = confirm('Do you want to skip even?');
 
-    for (let i = n; i <= m; i++) {
-        if (isSkipEven && i % 2 === 0) {
-            continue;
-        }
+console.log(`You have entered N: ${n}, M: ${m}, Is skip even: ${isSkipEven}`);
 
-        result = result + i;
+let result = 0;
+
+for (let i = n; i <= m; i++) {
+    if (isSkipEven && i % 2 === 0) {
+        continue;
     }
 
-    console.log("sum: ", result);
+    result = result + i;
 }
+
+console.log("Sum: ", result);
