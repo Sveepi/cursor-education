@@ -1,14 +1,31 @@
 let n;
-do {
+while (true) {
     n = parseInt(prompt('Enter N'));
+
+    if (isNaN(n)) {
+        alert('N is not a number');
+        continue;
+    }
+
+    break;
 }
-while (isNaN(n))
 
 let m;
-do {
+while (true) {
     m = parseInt(prompt('Enter M'));
+
+    if (isNaN(m)) {
+        alert('M is not a number');
+        continue;
+    }
+
+    if (n >= m) {
+        alert('M mast be grater than N!');
+        continue;
+    }
+
+    break;
 }
-while (isNaN(m) || n >= m)
 
 let isSkipEven = confirm('Do you want to skip even?');
 
