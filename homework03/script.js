@@ -38,3 +38,29 @@ function getMaxDigit(str) {
     }
     return maxDigit;
 }
+
+function countCurrency(str) {
+    const currencyUah = "UAH";
+    const indexUah = str.indexOf(currencyUah);
+    const rate = 0.040;
+
+
+    if (indexUah === -1) {
+        return null
+    }
+
+    let currencyUsd = "$";
+    let digits = parseFloat(str.slice(0, indexUah));
+    let currency = digits * rate;
+    let finalCurrency = Math.round(currency * 100) / 100 + currencyUsd;
+
+    return finalCurrency;
+
+}
+
+console.log(getRandomNumber(1, 10));
+console.log(capitalLetter("vLAD"));
+console.log(deleteLetters("a", "blablabla"));
+console.log(countLetters("a", "santa"));
+console.log(getMaxDigit("1236"));
+console.log(countCurrency("2500UAH"));
