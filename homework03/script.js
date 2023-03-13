@@ -27,3 +27,14 @@ function countLetters(char, str) {
     }
     return count;
 }
+
+function getMaxDigit(str) {
+    let maxDigit = "0";
+
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] > maxDigit) {
+            maxDigit = str[i];
+        }
+    }
+    return maxDigit;
+}
