@@ -3,7 +3,7 @@ while (true) {
     n = parseInt(prompt('Enter N'));
 
     if (isNaN(n)) {
-        alert('N is not a number');
+        alert('N has to be a number');
         continue;
     }
 
@@ -15,12 +15,12 @@ while (true) {
     m = parseInt(prompt('Enter M'));
 
     if (isNaN(m)) {
-        alert('M is not a number');
+        alert('M has to be a number');
         continue;
     }
 
     if (n >= m) {
-        alert('M mast be grater than N!');
+        alert('M has to be greater than N')
         continue;
     }
 
