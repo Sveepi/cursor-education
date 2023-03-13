@@ -13,3 +13,7 @@ function capitalLetter(str) {
     return result;
 }
 
+function deleteLetters (char, str) {
+    let newStr = str.split(char).join("");
+    return newStr;
+}
